@@ -1,0 +1,9 @@
+Get-Module vmware* -ListAvailable #related modules to vmware
+1
+	
+Find-Module -Name VMware.PowerCLI
+
+Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false
+
+Import-Module VMware.PowerCLI 
+Connect-VIServer -Server 172.20.44.100  #conenct to a server
